@@ -1,0 +1,8 @@
+- name: TestDockercontainercreation
+  hosts: docker-vm
+  tasks:
+        -name: Run the Docker bulid
+         shell: docker-compose -f /root/docker-compose.yaml build --no-cache
+
+        -name: RuntheDockercontainer
+         shell: docker-compose -f /root/docker-compose.yaml up -d
